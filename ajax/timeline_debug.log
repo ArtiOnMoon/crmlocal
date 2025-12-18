@@ -1,0 +1,20 @@
+[14-Nov-2025 10:54:08 Etc/GMT-3] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'v.name' in 'field list' in C:\OSPanel\home\crm.local\public\ajax\service_timeline.php:70
+Stack trace:
+#0 C:\OSPanel\home\crm.local\public\ajax\service_timeline.php(70): mysqli->query('SELECT \r\n      ...')
+#1 {main}
+  thrown in C:\OSPanel\home\crm.local\public\ajax\service_timeline.php on line 70
+[14-Nov-2025 10:54:08 Etc/GMT-3] FATAL: Uncaught mysqli_sql_exception: Unknown column 'v.name' in 'field list' in C:\OSPanel\home\crm.local\public\ajax\service_timeline.php:70
+Stack trace:
+#0 C:\OSPanel\home\crm.local\public\ajax\service_timeline.php(70): mysqli->query('SELECT \r\n      ...')
+#1 {main}
+  thrown in C:\OSPanel\home\crm.local\public\ajax\service_timeline.php:70
+[14-Nov-2025 10:56:12 Etc/GMT-3] PHP Fatal error:  Uncaught TypeError: array_map(): Argument #2 ($array) must be of type array, string given in C:\OSPanel\home\crm.local\public\ajax\service_timeline.php:40
+Stack trace:
+#0 C:\OSPanel\home\crm.local\public\ajax\service_timeline.php(40): array_map('intval', '[]')
+#1 {main}
+  thrown in C:\OSPanel\home\crm.local\public\ajax\service_timeline.php on line 40
+[14-Nov-2025 10:56:12 Etc/GMT-3] FATAL: Uncaught TypeError: array_map(): Argument #2 ($array) must be of type array, string given in C:\OSPanel\home\crm.local\public\ajax\service_timeline.php:40
+Stack trace:
+#0 C:\OSPanel\home\crm.local\public\ajax\service_timeline.php(40): array_map('intval', '[]')
+#1 {main}
+  thrown in C:\OSPanel\home\crm.local\public\ajax\service_timeline.php:40

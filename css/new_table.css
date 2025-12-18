@@ -1,0 +1,23 @@
+.s_table{
+    width:100%;
+    position: relative;
+    /*border-spacing: 5px;*/
+    border-collapse: separate;
+    background: #f7f7f7;
+    border:0;
+}
+.s_thead{
+    
+}
+.s_tbody{
+}
+.s_table tr{
+    height: 4em;
+    background: white;
+    margin:5px;
+}
+.s_table td{
+    padding: 5px;
+    border:5px;
+    border-color: red;
+}

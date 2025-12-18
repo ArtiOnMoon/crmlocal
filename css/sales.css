@@ -1,0 +1,130 @@
+.search_close_span{
+    float:right;
+    text-align: right;
+}
+.search_close_span a{
+    color: grey;
+    text-decoration: underline;
+}
+.sales_grid_conteiner{
+    display: grid;
+    grid-template-columns: 10em 10em 10em 10em 10em 10em 1fr 20em;
+    grid-template-rows: minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, 1fr);
+    gap: 5px;
+    grid-template-areas: 
+        "sale_id sale_status sale_date sale_vessel sale_vessel sale_qte sale_print sale_links"
+        "sale_customer sale_customer sale_request sale_po sale_pay_terms sale_ship_date sale_print sale_links"
+        "sale_invoice sale_pay_date sale_pay_amount sale_qte_note sale_qte_note sale_qte_note sale_qte_note sale_links"
+        "sale_details sale_details sale_details sale_details sale_details sale_details sale_details sale_details"
+        "sale_note sale_note sale_note sale_note sale_note sale_note sale_note sale_note";
+    height: 100%;
+}
+.sale_id{grid-area: sale_id;}
+.sale_status{grid-area: sale_status;}
+.sale_vessel{grid-area: sale_vessel;}
+.sale_date{grid-area: sale_date;}
+.sale_customer{grid-area: sale_customer;}
+.sale_request{grid-area: sale_request;}
+.sale_po{grid-area: sale_po;}
+.sale_ship_date{grid-area: sale_ship_date;}
+.sale_pay_terms{grid-area: sale_pay_terms;}
+.sale_pay_date{grid-area: sale_pay_date;}
+.sale_pay_amount{grid-area: sale_pay_amount;}
+.sale_invoice{grid-area: sale_invoice;}
+.sale_qte{grid-area: sale_qte;}
+.sale_qte_note{grid-area: sale_qte_note;}
+.sale_links{grid-area: sale_links;}
+.sale_print{grid-area: sale_print;}
+.sale_note{grid-area: sale_note;}
+.sale_details{
+    grid-area: sale_details;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto auto;
+    gap: 5px;
+}
+
+.sales_quotation_conteiner{
+    width:100%;
+    position: relative;
+}
+.sales_quotation_header_conteiner{
+    position: relative;
+}
+.sales_header{
+    top: 0;
+    position: sticky;
+    background: #404040;
+    color: white;
+    margin:0;
+    padding:3px;
+    font-size: 11px;
+    font-weight: normal;
+}
+.sales_quotation_line{
+    border-bottom: 5px solid white;
+    background: #DDD;
+    min-height: 30px;
+}
+.sales_quotation_line input,.sales_quotation_line button,.sales_quotation_line select, .sales_quotation_line textarea{
+    border:0;
+}
+.sales_quotation_div{
+    margin:0;
+    padding:3px;
+    text-align: center;
+    vertical-align: top;
+}
+.sales_quotation_div input{
+    border:0;
+}
+.sales_quotation_div select{
+    border:0;
+    width:100%;
+}
+.sales_quotation_second_line input{
+    border:0;
+}
+.sales_col_n{
+    width:15px;
+}
+.sales_col_control{
+    width:65px;
+}
+.sales_col_descr{
+    width:calc(100% - 20px);
+}
+.sales_col_qty{
+    width:50px;
+}
+.sales_col_cfm_qty{
+    width:50px;
+}
+.cfm_field{
+    background: #ccffcc;
+}
+.sales_col_price{
+    width:80px;
+}
+.sales_col_vat{
+    width:50px;
+}
+.sales_col_discount{
+    width:55px;
+}
+.sales_col_currency{
+    width:60px;
+}
+.sales_col_exrate{
+    width:60px;
+}
+.sales_col_amount{
+    width:65px;
+}
+.sales_col_delete{
+     width:30px;
+}
+.sublink{
+    font-size: smaller;
+    color: #0000FF;
+    cursor: pointer;
+}

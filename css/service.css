@@ -1,0 +1,61 @@
+/*SERVICE GRID*/
+.service_grid_conteiner{
+    display: grid;
+    grid-template-columns: 10em 10em 10em 10em 10em 1fr 200px;
+    grid-template-rows: auto auto auto auto minmax(0,1fr) auto;
+    gap:5px;
+    grid-template-areas: 
+        "srv_status srv_date srv_srform srv_payment srv_inv srv_insructions srv_links"
+        "srv_vesssel srv_vesssel srv_eta srv_etd srv_port srv_insructions srv_links"
+        "srv_customer srv_customer srv_request srv_po srv_po2 srv_insructions srv_links"
+        "srv_agent srv_agent srv_agent srv_agent srv_pass srv_insructions srv_links"
+        "srv_table srv_table srv_table srv_table srv_table srv_table srv_table"
+        "srv_bottom_block srv_bottom_block srv_bottom_block srv_bottom_block srv_bottom_block srv_bottom_block srv_bottom_block";
+}
+.srv_id{grid-area: srv_id;}
+.srv_status{grid-area: srv_status;}
+.srv_date{grid-area: srv_date;}
+.srv_srform{grid-area: srv_srform;}
+.srv_payment{grid-area: srv_payment;}
+.srv_inv{grid-area: srv_inv;}
+.srv_agent{grid-area: srv_agent;}
+.srv_pass{grid-area: srv_pass;}
+.srv_customer{grid-area: srv_customer;}
+.srv_request{grid-area: srv_request;}
+.srv_po{grid-area: srv_po;}
+.srv_po2{grid-area: srv_po2;}
+.srv_vesssel{grid-area: srv_vesssel};
+.srv_eta{grid-area: srv_eta;}
+.srv_etd{grid-area: srv_etd;}
+.srv_port{grid-area: srv_port;}
+.srv_links{grid-area: srv_links;}
+.srv_insructions{grid-area: srv_insructions;}
+.srv_table {grid-area: srv_table;overflow: auto;}
+.srv_bottom_block{
+    grid-area: srv_bottom_block;
+    display: grid;
+    gap:5px;
+    grid-template-columns: auto 1fr;
+}
+
+#calculation_tab{overflow:auto;}
+
+/*Download menu*/
+.service_download_menu{
+    position: fixed;
+    bottom: 10px;
+    /*left: 10px;*/
+    padding:5px 20px;
+    background: #404040;
+    color:white;
+    width:100px;
+    height:12px;
+    transition-duration: 0.4s;
+}
+.service_download_menu_body{height:0; overflow: hidden; margin-top:10px;}
+.service_download_menu:hover{
+    transition-duration: 0.4s;
+    width:300px;
+    height:200px;    
+}
+.service_download_menu:hover > .service_download_menu_body{height:180px;transition-duration: 0.3s;transition-delay: 0.1s}

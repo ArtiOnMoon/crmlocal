@@ -1,0 +1,4 @@
+.templates/
+.functions/db.php
+.nbproject/
+/nbproject/private/

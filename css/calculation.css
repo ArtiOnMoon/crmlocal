@@ -1,0 +1,99 @@
+.comboselect_container,
+.comboselect_container select {
+  position: relative;
+  height:1.5em;
+  width: 100%;
+}
+.comboselect_container input {
+  position: absolute;
+  z-index: 1;
+  width: calc(100% - 25px);
+  height: 1.5em;
+}
+.input_header{
+    font-weight: bold;
+}
+
+.calc_action_td{
+    text-align: left;
+}
+.calc_fancy_table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.calc_fancy_table td{
+    vertical-align: top;
+}
+.calc_fancy_td{
+    background: #ddd;
+}
+.calc_fancy_td_alt{
+    padding: 5px;
+    text-align: center;
+}
+.calc_fancy_table textArea{
+    width: 100%;
+    margin:0;
+    padding:0;
+    border: 0;
+}
+.calc_fancy_table td{
+    margin:0;
+    padding:0.5em 0.2em;
+}
+.calc_fancy_td input,.calc_fancy_td button {
+    border: 0 !important;
+}
+.calc_fancy_td a{
+    border: 0 !important;
+}
+.calc_fancy_td select{
+    border: 0;
+}
+.calc_fancy_container{
+    width:100%;
+    background: #ddd;
+}
+.calc_fancy_div{
+    display:inline-block;
+    margin:5px;
+    vertical-align: top;
+}
+.calc_fancy_div *{
+    border: 0;
+}
+.calc_fancy_subtable{
+    font-family: Helvetica;
+    font-size: 12px !important;
+    border-spacing: 3px;
+}
+.calc_fancy_subtable td{
+    padding: 0;
+    line-height: 1.4em;
+}
+.calc_fancy_subtable input{
+    margin: 1px .2em;
+}
+.calc_fancy_subtable select{
+    margin: 1px .2em;
+    width:10em;
+}
+.calc_div_border{
+    border:1px solid #ccc;
+}
+.calc_border_div{
+    border: 1px solid #ccc;
+    position: relative;
+    display: inline-block;
+}
+.calc_caption{
+    position: absolute;
+    top:3px;
+    left:3px;
+    font-size: 12px;
+    color: #ccc;
+    background: #ddd;
+}
+.calc_table{
+    text-align: left;
+}
