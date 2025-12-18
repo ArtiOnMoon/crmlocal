@@ -1,0 +1,201 @@
+[17-Nov-2025 12:15:14 Etc/GMT-3] POST data: Array
+(
+    [status] => [3,7]
+    [users] => []
+)
+
+[17-Nov-2025 12:15:14 Etc/GMT-3] Decoded status: Array
+(
+    [0] => 3
+    [1] => 7
+)
+
+[17-Nov-2025 12:15:14 Etc/GMT-3] Decoded users: Array
+(
+)
+
+[17-Nov-2025 12:15:14 Etc/GMT-3] SQL Query: 
+        SELECT 
+            s.service_id AS id,
+            s.vessel_id,
+            COALESCE(v.vessel_name, '—') AS vessel_name,
+            s.status,
+            s.ETA AS eta,
+            s.ETD AS etd,
+            s.description AS customer,
+            COALESCE(u.full_name, '—') AS engineer,
+            s.service_executor_id
+        FROM service s
+        LEFT JOIN vessels v ON s.vessel_id = v.vessel_id
+        LEFT JOIN users u ON s.service_executor_id = u.uid
+        WHERE s.status IN ('3','7') AND s.service_deleted = 0
+        ORDER BY COALESCE(s.ETA, s.ETD, '9999-12-31'), s.service_id ASC
+    
+[17-Nov-2025 12:15:18 Etc/GMT-3] POST data: Array
+(
+    [status] => [3,7]
+    [users] => [30]
+)
+
+[17-Nov-2025 12:15:18 Etc/GMT-3] Decoded status: Array
+(
+    [0] => 3
+    [1] => 7
+)
+
+[17-Nov-2025 12:15:18 Etc/GMT-3] Decoded users: Array
+(
+    [0] => 30
+)
+
+[17-Nov-2025 12:15:18 Etc/GMT-3] SQL Query: 
+        SELECT 
+            s.service_id AS id,
+            s.vessel_id,
+            COALESCE(v.vessel_name, '—') AS vessel_name,
+            s.status,
+            s.ETA AS eta,
+            s.ETD AS etd,
+            s.description AS customer,
+            COALESCE(u.full_name, '—') AS engineer,
+            s.service_executor_id
+        FROM service s
+        LEFT JOIN vessels v ON s.vessel_id = v.vessel_id
+        LEFT JOIN users u ON s.service_executor_id = u.uid
+        WHERE s.status IN ('3','7') AND s.service_executor_id IN (30) AND s.service_deleted = 0
+        ORDER BY COALESCE(s.ETA, s.ETD, '9999-12-31'), s.service_id ASC
+    
+[17-Nov-2025 12:15:19 Etc/GMT-3] POST data: Array
+(
+    [status] => [3,7]
+    [users] => []
+)
+
+[17-Nov-2025 12:15:19 Etc/GMT-3] Decoded status: Array
+(
+    [0] => 3
+    [1] => 7
+)
+
+[17-Nov-2025 12:15:19 Etc/GMT-3] Decoded users: Array
+(
+)
+
+[17-Nov-2025 12:15:19 Etc/GMT-3] SQL Query: 
+        SELECT 
+            s.service_id AS id,
+            s.vessel_id,
+            COALESCE(v.vessel_name, '—') AS vessel_name,
+            s.status,
+            s.ETA AS eta,
+            s.ETD AS etd,
+            s.description AS customer,
+            COALESCE(u.full_name, '—') AS engineer,
+            s.service_executor_id
+        FROM service s
+        LEFT JOIN vessels v ON s.vessel_id = v.vessel_id
+        LEFT JOIN users u ON s.service_executor_id = u.uid
+        WHERE s.status IN ('3','7') AND s.service_deleted = 0
+        ORDER BY COALESCE(s.ETA, s.ETD, '9999-12-31'), s.service_id ASC
+    
+[17-Nov-2025 12:15:31 Etc/GMT-3] POST data: Array
+(
+    [status] => [3,7]
+    [users] => [22]
+)
+
+[17-Nov-2025 12:15:31 Etc/GMT-3] Decoded status: Array
+(
+    [0] => 3
+    [1] => 7
+)
+
+[17-Nov-2025 12:15:31 Etc/GMT-3] Decoded users: Array
+(
+    [0] => 22
+)
+
+[17-Nov-2025 12:15:31 Etc/GMT-3] SQL Query: 
+        SELECT 
+            s.service_id AS id,
+            s.vessel_id,
+            COALESCE(v.vessel_name, '—') AS vessel_name,
+            s.status,
+            s.ETA AS eta,
+            s.ETD AS etd,
+            s.description AS customer,
+            COALESCE(u.full_name, '—') AS engineer,
+            s.service_executor_id
+        FROM service s
+        LEFT JOIN vessels v ON s.vessel_id = v.vessel_id
+        LEFT JOIN users u ON s.service_executor_id = u.uid
+        WHERE s.status IN ('3','7') AND s.service_executor_id IN (22) AND s.service_deleted = 0
+        ORDER BY COALESCE(s.ETA, s.ETD, '9999-12-31'), s.service_id ASC
+    
+[17-Nov-2025 12:15:36 Etc/GMT-3] POST data: Array
+(
+    [status] => [3,7]
+    [users] => []
+)
+
+[17-Nov-2025 12:15:36 Etc/GMT-3] Decoded status: Array
+(
+    [0] => 3
+    [1] => 7
+)
+
+[17-Nov-2025 12:15:36 Etc/GMT-3] Decoded users: Array
+(
+)
+
+[17-Nov-2025 12:15:36 Etc/GMT-3] SQL Query: 
+        SELECT 
+            s.service_id AS id,
+            s.vessel_id,
+            COALESCE(v.vessel_name, '—') AS vessel_name,
+            s.status,
+            s.ETA AS eta,
+            s.ETD AS etd,
+            s.description AS customer,
+            COALESCE(u.full_name, '—') AS engineer,
+            s.service_executor_id
+        FROM service s
+        LEFT JOIN vessels v ON s.vessel_id = v.vessel_id
+        LEFT JOIN users u ON s.service_executor_id = u.uid
+        WHERE s.status IN ('3','7') AND s.service_deleted = 0
+        ORDER BY COALESCE(s.ETA, s.ETD, '9999-12-31'), s.service_id ASC
+    
+[17-Nov-2025 12:15:42 Etc/GMT-3] POST data: Array
+(
+    [status] => [3,7]
+    [users] => [33]
+)
+
+[17-Nov-2025 12:15:42 Etc/GMT-3] Decoded status: Array
+(
+    [0] => 3
+    [1] => 7
+)
+
+[17-Nov-2025 12:15:42 Etc/GMT-3] Decoded users: Array
+(
+    [0] => 33
+)
+
+[17-Nov-2025 12:15:42 Etc/GMT-3] SQL Query: 
+        SELECT 
+            s.service_id AS id,
+            s.vessel_id,
+            COALESCE(v.vessel_name, '—') AS vessel_name,
+            s.status,
+            s.ETA AS eta,
+            s.ETD AS etd,
+            s.description AS customer,
+            COALESCE(u.full_name, '—') AS engineer,
+            s.service_executor_id
+        FROM service s
+        LEFT JOIN vessels v ON s.vessel_id = v.vessel_id
+        LEFT JOIN users u ON s.service_executor_id = u.uid
+        WHERE s.status IN ('3','7') AND s.service_executor_id IN (33) AND s.service_deleted = 0
+        ORDER BY COALESCE(s.ETA, s.ETD, '9999-12-31'), s.service_id ASC
+    

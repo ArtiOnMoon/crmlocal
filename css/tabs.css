@@ -1,0 +1,77 @@
+.tab_button{
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap
+}
+.tab_bar{
+    width:100%;
+    background: black;
+    color:white;
+    text-align: center;
+}
+.tab_button:hover{
+    background-color:#ccc;
+    color:#000
+}
+.tab_bar2 .tab_button:hover{
+    background-color:#000;
+    color:#ccc;
+}
+.selected_tab{
+    background:#ccc;
+    color: #0066ff;
+    font-weight: bold;
+    border-bottom: none;
+}
+.tab_bar2{
+    width:100%;
+    background: black;
+    color:white;
+    text-align: left;
+}
+.tab{
+    text-align: left;
+    display:none;
+}
+.tab_content{
+    text-align: left;
+}
+.linked_table tr{
+    cursor:pointer;
+}
+
+/*TABS2 */
+.tab_header {
+    display: inline-block;
+    background: #ccc; /* Цвет фона */
+    padding: 5px 10px; /* Поля вокруг текста */
+    border: 1px solid #666; /* Параметры рамки */
+    border-bottom: none; /* Снизу линию убираем */
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    cursor: pointer;
+}
+.tab_active{
+    position: relative; /* Относительное позиционирование */
+    background: #fff; /* Цвет фона */
+    top: 1px; /* Сдвигаем вниз */
+    z-index: 1;
+}
+.tab_div{
+    border: 1px solid #666; /* Параметры рамки */
+    padding: 10px; /* Поля вокруг текста */
+    left: 0; /* Размещаем у левого края */
+    width: calc(100% - 20px); /* Ширина содержимого */
+    display: none; /* Прячем вкладку */
+}
+.tab_div_active{
+    display:block !important;
+}

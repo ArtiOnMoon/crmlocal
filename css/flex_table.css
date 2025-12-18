@@ -1,0 +1,23 @@
+\\Не используется
+
+.flex_conteiner{
+    display: flex;
+    padding: 5px;
+    background: #f7f7f7;
+    margin: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.flex_conteiner:hover{
+    background: #ccedd5;
+}
+.flex_element{
+    flex-direction: column;
+    margin: 5px 20px;
+}
+.flex_wide_200{
+    min-width: 200px;
+}
+.flex_wide_100{
+    min-width: 100px;
+}

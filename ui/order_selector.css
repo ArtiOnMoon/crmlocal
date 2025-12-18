@@ -1,0 +1,29 @@
+.order_selector{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid black;
+}
+.order_selector_type{
+    border:0;
+    padding: 0px;
+}
+.order_selector_value{
+    border:0;
+    padding: 0px;
+}
+.order_selector_button{
+    border:0;
+    padding: 0px 2px;
+    background: 0;
+}
+.order_selector_button:hover{
+    background: greenyellow;
+}
+.order_selector_search{
+    /*display:none;*/
+    position: absolute;
+    width:100%;
+    background: #EEE;
+    max-height: 400px;
+    min-height: 300px;
+}

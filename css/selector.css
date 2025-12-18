@@ -1,0 +1,150 @@
+.selector{
+    position: relative;
+    white-space: nowrap;
+}
+.selector_input{
+    margin:0;
+    padding: 0 2px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 1px solid black;
+    line-height: 2rem;
+}
+.selector_button{
+    margin-left: -1px;
+    padding: 0 2px;
+    background: white;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    line-height: 2rem;
+    width: 20px;
+    border:0;
+    border-bottom: 1px solid black;
+}
+.selector_results{
+    display:none;
+    overflow:auto;
+    position: absolute;
+    max-width:500px;
+    max-height:400px;
+    min-width: 300px;
+    border:1px solid black;
+    box-shadow: 4px 4px rgba(0,0,0,0.1);
+    background: #DDD;
+    z-index: 999;
+    text-align: left;
+    color: black;
+    font-weight: normal;
+}
+.selector_table tr{
+    cursor: pointer;
+}
+.selector_table tr:hover{
+    background: #f9d6ac;
+}
+.selector_tosend_field{
+    opacity: 0;
+    width:1px;
+    position: absolute;
+    border:none;
+}
+.selector_label{
+    width:100%;
+    display: inline-block;
+    position: absolute;
+    left:0;
+    font-size: smaller;
+    color:#666666;
+    text-align: left;
+    margin:0;
+    padding:0;
+    font-style: italic;
+}
+.selector_select{
+    max-width: 300px;
+}
+.selector_has_nmnc{
+    border:2px solid rgba(0,200,0,0.7);
+}
+
+.selector_search_div{
+    position:absolute;
+    width:inherit;
+    margin:0;
+    border:1px solid black;
+    display:none;
+    overflow: auto;
+    background: #DDD;
+    z-index: 999;
+    max-height: 300px;
+    text-align: left;
+}
+.selector_result_div{
+    position: relative;
+    width: calc(100% - 8px);
+    padding: 2px;
+    margin: 3px 2px;
+    cursor: pointer;
+    white-space: normal;
+}
+.selector_result_div:hover{
+    background: #ccffcc;
+}
+.selector_client_of{
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+#user_select3{
+    overflow:auto;
+    max-height: 300px;
+    position: absolute;
+    background: white;
+    padding: 5px;
+    display:none;
+    min-width:200px;
+}
+#user_select_input{
+    cursor: pointer;
+}
+#user_select_back_div{
+    display: none;
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index: 4;
+    background: red;
+}
+
+.calc_long_input{
+    width:calc(100% - 24px);
+}
+
+.selector_nmnc_search_field{
+    width:calc(100% - 15px);
+}
+.stock_selector_conteiner{
+    padding:0;
+    position: relative;
+}
+.stock_selector_input{
+    height: 18px;
+    padding:0;
+    margin:0;
+    border:0;
+    width: 6em;
+    cursor: pointer;
+}
+.stock_selector_window{
+    padding: 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    display:none;
+    position: absolute;
+    left:0;
+    text-align:left;background:white;
+    color: black;
+    border:1px solid black;
+}

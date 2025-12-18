@@ -1,0 +1,91 @@
+.po_grid_conteiner{
+    display: grid;
+    grid-template-columns: 10em 10em 10em 10em 15em 1fr 20em;
+    grid-template-rows: minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, 1fr);
+    gap:5px;
+    grid-template-areas:
+        "po_status po_date po_our_comp po_currency po_print_note po_delivery po_links"
+        "po_customer po_customer po_ship_date po_awb po_print_note po_delivery po_links"
+        "po_invoice po_invoice po_invoice po_invoice po_print po_delivery po_links"
+        "po_body_conteiner po_body_conteiner po_body_conteiner po_body_conteiner po_body_conteiner po_body_conteiner po_body_conteiner"
+        "po_note po_note po_note po_note po_note po_note po_note";
+}
+.po_status{grid-area: po_status;}
+.po_date{grid-area: po_date;}
+.po_our_comp{grid-area: po_our_comp;}
+.po_currency{grid-area: po_currency;}
+.po_customer{grid-area: po_customer;}
+.po_ship_date{grid-area: po_ship_date;}
+.po_awb{grid-area: po_awb;}
+.po_invoice{grid-area: po_invoice;}
+.po_delivery{grid-area: po_delivery;}
+.po_links{grid-area: po_links;}
+.po_note{grid-area: po_note;}
+.po_print_note{grid-area: po_print_note;}
+.po_print{grid-area: po_print;}
+.po_body_conteiner{
+    grid-area: po_body_conteiner;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+}
+#stock_related{overflow:auto;}
+
+.po_delivery_conatiner{
+    display: grid;
+    gap:5px;
+    grid-template-areas: 
+        "po_delivery1 po_delivery1"
+        "po_delivery2 po_delivery2"
+        "po_delivery3 po_delivery3"
+        "po_delivery4 po_delivery4"
+        "po_delivery5 po_delivery6";
+}
+.po_delivery1{grid-area: po_delivery1;}
+.po_delivery2{grid-area: po_delivery2;}
+.po_delivery3{grid-area: po_delivery3;}
+.po_delivery4{grid-area: po_delivery4;}
+.po_delivery5{grid-area: po_delivery5;}
+.po_delivery6{grid-area: po_delivery6;}
+
+.po_quotation_thead{
+    position: sticky;
+    top: 0px;
+}
+.po_delivery_line{
+    width:100%;
+    margin:0;
+    padding:0;
+}
+.po_table_container{
+    overflow: auto;
+}
+.po_quotation_table{
+    width: 100%;
+}
+.po_quotation_line{
+    border-bottom: 5px solid white;
+    background: #ddd;
+    min-height: 30px;
+}
+.po_col_no, .po_col_delete{
+    width:20px;
+}
+.po_col_control{
+    width:80px;
+}
+.po_col_qty{
+    width:60px;
+}
+.po_col_qty, .po_col_amount, .po_col_discount, .po_col_price{
+    width:60px;
+}
+.po_col_note{
+    width:150px;
+}
+.po_col_descr{
+    width: calc(100% - 20px);
+}
+.po_related_docs{
+    width:100%;
+    border-bottom: 2px solid black;
+}

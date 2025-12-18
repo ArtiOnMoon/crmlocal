@@ -1,0 +1,305 @@
+/* ==========================================
+   ТАЙМЛАЙН ЗАЯВОК — полный стилизованный блок
+   ========================================== */
+
+#timeline-wrapper {
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    background: #fff;
+    margin: 15px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* --- Заголовок --- */
+#timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #f5f5f5;
+    border-bottom: 1px solid #e3e3e3;
+    user-select: none;
+    transition: background 0.2s;
+    font-size: 1.5rem;
+}
+
+#timeline-header:hover {
+    background: #e8e8e8;
+}
+
+#timeline-header .timeline-arrow {
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #555;
+    border-bottom: 2px solid #555;
+    transform: rotate(45deg); /* → раскрыто */
+    transition: transform 0.25s ease;
+}
+
+/* ↑ свёрнуто */
+#timeline-wrapper.timeline-collapsed #timeline-header .timeline-arrow {
+    transform: rotate(-135deg);
+}
+
+/* --- Тело --- */
+#timeline-body {
+    display: none;
+}
+
+#timeline-wrapper:not(.timeline-collapsed) #timeline-body {
+    display: block;
+}
+
+/* --- Чекбокс --- */
+#timeline-body label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 10px 10px 5px;
+    font-size: 14px;
+    color: #444;
+    user-select: none;
+}
+
+#timeline-load-all {
+    margin: 0;
+}
+
+/* --- Контейнер Vis.js --- */
+#timeline-container {
+    position: relative;
+    min-height: 60px;
+}
+
+/* ==========================================
+   Группы (левая колонка) — с выравниванием заявки по правому краю
+   ========================================== */
+
+.timeline-group-header {
+    display: flex;
+    align-items: center;
+    width: 90%; 
+    padding: 6px 8px;
+    gap: 8px;
+    cursor: default;
+    border-radius: 4px;
+}
+
+/* Точка статуса — слева */
+.group-status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Цвета статусов */
+.status_request     { background: gray; }
+.status_quotation   { background: #d23f00; }     /* тёмно-оранжевый (как в JS) */
+.status_confirmed   { background: #33d6d3; }
+.status_follow-up   { background: #97fc9b; }
+.status_complited   { background: #9ad7ed; }
+.status_expired     { background: #f79e99; }
+.status_unknown     { background: #888; }
+
+/* Судно */
+.group-vessel-link {
+    color: #1a5fb4;
+    font-weight: 600;
+    text-decoration: none;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.group-vessel-link:hover {
+    text-decoration: underline;
+}
+
+/* Контейнер для "стрелка + заявка" — прижат к правому краю */
+.group-service-section {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+/* Стрелка-разделитель */
+.group-separator {
+    color: #888;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+/* Заявка */
+.group-service-link {
+    color: #2c5aa0;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+.group-service-link:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   Vis.js — элементы таймлайна (.vis-item)
+   Цвета наследуются от статуса группы
+   ========================================== */
+
+/* Общие стили элементов */
+.vis-item {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+}
+
+.vis-item .vis-item-content {
+    padding: 2px 6px;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Цвета фона (20% opacity) и рамок (100%) — синхронизированы с .group-status-dot */
+.vis-item.status_request     { background: rgba(128, 128, 128, 0.2);     border-color: gray; }
+.vis-item.status_quotation   { background: rgba(210, 63, 0, 0.2);       border-color: #d23f00; }
+.vis-item.status_confirmed   { background: rgba(51, 214, 211, 0.2);     border-color: #33d6d3; }
+.vis-item.status_follow-up   { background: rgba(151, 252, 155, 0.2);    border-color: #97fc9b; }
+.vis-item.status_complited   { background: rgba(154, 215, 237, 0.2);    border-color: #9ad7ed; }
+.vis-item.status_expired     { background: rgba(247, 158, 153, 0.2);    border-color: #f79e99; }
+.vis-item.status_unknown     { background: rgba(136, 136, 136, 0.2);    border-color: #888; }
+
+/* Минимальные отступы в левой панели */
+.vis-panel.vis-left .vis-content {
+    overflow: hidden;
+}
+
+.vis-labelset .vis-label .vis-inner {
+    width: 100%; /* ← вместо 95% — чтобы не было отступа */
+}
+
+/* ==========================================
+   Анимация загрузки внутри таймлайна
+   ========================================== */
+
+.timeline-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 60px;
+    font-size: 16px;
+    color: #666;
+}
+
+.timeline-loading-dots {
+    display: inline-block;
+    margin-left: 6px;
+}
+
+.timeline-loading-dots::after {
+    content: '.';
+    animation: loading-dots 1.2s infinite;
+}
+
+@keyframes loading-dots {
+    0%   { content: '.'; }
+    33%  { content: '..'; }
+    66%  { content: '...'; }
+    100% { content: '.'; }
+}
+
+.timeline-periodbox {
+    display: flex;
+}
+#timeline-body label{
+display: flex;
+}
+#period-selector {
+    display: flex;
+}
+
+/* Бейдж "[Визит]" в таймлайне */
+.timeline-context-badge {
+    display: inline-block;
+    background-color: #6f42c1; /* фиолетовый — цвет Follow-Up */
+    color: white;
+    font-size: 0.75em;
+    padding: 1px 4px;
+    border-radius: 3px;
+    margin-left: 4px;
+    cursor: help;
+}
+
+/* Контейнер контента — для корректного выравнивания */
+.timeline-item-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    line-height: 1.3;
+}
+
+/* Пунктирная обводка для контекстных заявок */
+.service_contextual {
+    border: 2px dashed #666 !important;
+}
+
+/* Для точечных элементов */
+.service_contextual.service_dot {
+    border-style: dashed !important;
+    background-color: transparent !important;
+}
+
+/* Для диапазонных элементов */
+.service_contextual:not(.service_dot) {
+    border-style: dashed !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.timeline-context-badge {
+    font-size: 0.8em;
+    color: #666;
+    font-style: italic;
+    margin-left: 5px;
+}
+
+#timeline-body {
+max-height: 45vh;
+overflow-y: scroll;
+}
+
+.timeline-out-of-period {
+    background-color: #ff9800 !important;
+    color: white !important;
+    border: 1px dashed #e65100 !important;
+}
+
+/* Стили для кастомного tooltip Vis.js */
+.vis-timeline .timeline-tooltip {
+    background: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    max-width: 300px;
+    z-index: 1000;
+}
+
+/* Стили для бейджа [Визит] */
+.timeline-context-badge {
+    background: #6c757d;
+    color: white;
+    padding: 0 4px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    margin-left: 4px;
+}
